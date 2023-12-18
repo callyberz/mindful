@@ -90,7 +90,7 @@ export default function Meditation() {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="w-3/4 md:w-1/2">
+      <div className="w-1/2">
         <BreathingExerciseCircle text={text} />
       </div>
     </div>
