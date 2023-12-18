@@ -1,4 +1,4 @@
-export function ClockIcon(props) {
+export function ClockIcon(props: { className: string }) {
   return (
     <svg
       {...props}

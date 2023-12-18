@@ -1,4 +1,4 @@
-export function BarChartIcon(props) {
+export function BarChartIcon(props: { className: string }) {
   return (
     <svg
       {...props}

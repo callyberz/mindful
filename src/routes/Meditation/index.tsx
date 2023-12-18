@@ -1,6 +1,7 @@
+import { useEffect, useState } from 'react';
 import './index.css';
 
-const BreathingExerciseCircle = () => {
+const BreathingExerciseCircle = ({ text }: { text?: string }) => {
   return (
     <svg
       viewBox="0 0 100 100"
@@ -24,14 +25,39 @@ const BreathingExerciseCircle = () => {
         fill="none"
       />
       <circle className="rotating-circle" cx="50" cy="5" r="2" fill="white" />
+
+      {text && (
+        <text
+          x="50%"
+          y="50%"
+          dominantBaseline="middle"
+          textAnchor="middle"
+          fill="white"
+        >
+          {text}
+        </text>
+      )}
     </svg>
   );
 };
+
+const InhaleSeconds = 5000;
+
 export default function Meditation() {
+  const [text, setText] = useState('Inhale');
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setText((prevText) => (prevText === 'Inhale' ? 'Exhale' : 'Inhale'));
+    }, InhaleSeconds);
+
+    return () => clearInterval(timer); // Clean up on component unmount
+  }, []);
+
   return (
     <div className="flex justify-center items-center">
-      <div className="w-1/2">
-        <BreathingExerciseCircle />
+      <div className="w-1/3">
+        <BreathingExerciseCircle text={text} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-export function PersonStandingIcon(props) {
+export function PersonStandingIcon(props: { className: string }) {
   return (
     <svg
       {...props}

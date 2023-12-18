@@ -1,4 +1,4 @@
-export function CodeIcon(props) {
+export function CodeIcon(props: { className: string }) {
   return (
     <svg
       {...props}

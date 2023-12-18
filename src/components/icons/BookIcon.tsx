@@ -1,4 +1,4 @@
-export function BookIcon(props) {
+export function BookIcon(props: { className: string }) {
   return (
     <svg
       {...props}

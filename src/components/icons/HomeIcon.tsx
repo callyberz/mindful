@@ -1,4 +1,4 @@
-export function HomeIcon(props) {
+export function HomeIcon(props: { className: string }) {
   return (
     <svg
       {...props}

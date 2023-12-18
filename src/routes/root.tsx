@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { HomeIcon } from '../components/icons/HomeIcon';
 import { ClockIcon } from '../components/icons/ClockIcon';
 import { PersonStandingIcon } from '../components/icons/PersonStandingIcon';
@@ -22,7 +22,9 @@ export default function Root() {
 
       <div className="fixed inset-x-0 bottom-0 p-4 bg-[#4338ca] bg-opacity-90">
         <div className="flex justify-between">
-          <HomeIcon className="text-white w-6 h-6" />
+          <Link to="/">
+            <HomeIcon className="text-white w-6 h-6" />
+          </Link>
           <ClockIcon className="text-white w-6 h-6" />
           <PersonStandingIcon className="text-white w-6 h-6" />
         </div>
