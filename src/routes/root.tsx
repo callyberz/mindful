@@ -2,10 +2,20 @@ import { Link, Outlet } from 'react-router-dom';
 import { HomeIcon } from '../components/icons/HomeIcon';
 import { ClockIcon } from '../components/icons/ClockIcon';
 import { PersonStandingIcon } from '../components/icons/PersonStandingIcon';
+import { useState, useEffect } from 'react';
 
 export default function Root() {
-  const currentDate = new Date();
-  const currentDateTimeString = currentDate.toLocaleString();
+  const [currentDateTimeString, setCurrentDateTimeString] = useState<string>(
+    new Date().toLocaleString()
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDateTimeString(new Date().toLocaleString());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
