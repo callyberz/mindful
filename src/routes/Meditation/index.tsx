@@ -31,7 +31,8 @@ export const RotatingCircle = styled.circle`
 `;
 
 export const Magnify = styled.div`
-  animation: ${magnify} ${inahleExhaleIntervalInSecond}s ease-in-out infinite;
+  animation: ${magnify} ${inahleExhaleIntervalInSecond / 2}s ease-in-out
+    infinite;
 `;
 
 const BreathingExerciseCircle = ({ text }: { text?: string }) => {
@@ -90,7 +91,7 @@ export default function Meditation() {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="w-1/2">
+      <div className="w-3/4 max-w-md">
         <BreathingExerciseCircle text={text} />
       </div>
     </div>
