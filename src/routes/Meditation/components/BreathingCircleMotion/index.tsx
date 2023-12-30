@@ -27,7 +27,7 @@ export const BreathingCircleMotion = ({
   return (
     <motion.div
       key={magnifyingDuration}
-      className="w-96 h-96 bg-purple-400 border-4 border-purple-800 rounded-full flex justify-center items-center"
+      className="w-64 h-64 md:w-96 md:h-96 bg-purple-400 border-4 border-purple-800 rounded-full flex justify-center items-center"
       animate={{
         scale: [1, 1.1, 1]
       }}
@@ -40,7 +40,7 @@ export const BreathingCircleMotion = ({
       }}
     >
       <motion.div
-        className="w-64 h-64 bg-purple-400 border-4 border-purple-800 rounded-full flex justify-center items-center"
+        className="w-36 h-36 md:w-64 md:h-64 bg-purple-400 border-4 border-purple-800 rounded-full flex justify-center items-center"
         animate={{
           scale: [1, 1.15, 1]
         }}
