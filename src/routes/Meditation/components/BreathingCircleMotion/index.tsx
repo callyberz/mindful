@@ -21,7 +21,10 @@ export const BreathingCircleMotion = ({
       // plus 1/2 of the repeatDelay
     }, (magnifyingDuration / 4 + repeatDelay / 2) * 1000);
 
-    return () => clearInterval(timer);
+    return () => {
+      setBreathingText('Inhale');
+      return clearInterval(timer);
+    };
   }, [magnifyingDuration]);
 
   return (
