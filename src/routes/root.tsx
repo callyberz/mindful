@@ -30,6 +30,12 @@ export default function Root() {
         <div id="content">
           <Outlet />
         </div>
+
+        <div className="fixed bottom-12 right-0 p-4 bg-opacity-90">
+          <Link to="https://callyberz.com/" target="__blank">
+            More on <u>callyberz.com</u>
+          </Link>
+        </div>
       </div>
 
       <div className="fixed inset-x-0 bottom-0 p-4 bg-[#4338ca] bg-opacity-90">
@@ -37,8 +43,12 @@ export default function Root() {
           <Link to="/">
             <HomeIcon className="text-white w-6 h-6" />
           </Link>
-          <ClockIcon className="text-white w-6 h-6" />
-          <PersonStandingIcon className="text-white w-6 h-6" />
+          <Link to="/history">
+            <ClockIcon className="text-white w-6 h-6" />
+          </Link>
+          <Link to="/account">
+            <PersonStandingIcon className="text-white w-6 h-6" />
+          </Link>
         </div>
       </div>
     </>

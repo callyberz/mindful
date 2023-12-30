@@ -29,7 +29,7 @@ export const BreathingCircleMotion = ({
       key={magnifyingDuration}
       className="w-96 h-96 bg-purple-400 border-4 border-purple-800 rounded-full flex justify-center items-center"
       animate={{
-        scale: [1, 1.2, 1]
+        scale: [1, 1.1, 1]
       }}
       transition={{
         duration: magnifyingDuration / 2,
@@ -42,7 +42,7 @@ export const BreathingCircleMotion = ({
       <motion.div
         className="w-64 h-64 bg-purple-400 border-4 border-purple-800 rounded-full flex justify-center items-center"
         animate={{
-          scale: [1, 1.2, 1]
+          scale: [1, 1.15, 1]
         }}
         transition={{
           duration: magnifyingDuration / 2,
@@ -54,7 +54,7 @@ export const BreathingCircleMotion = ({
       >
         <motion.div
           className="text-2xl text-purple-300 cursor-pointer"
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
           {breathingText}

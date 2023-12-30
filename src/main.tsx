@@ -5,8 +5,10 @@ import Root from './routes/root';
 import ErrorPage from './error-page';
 import Meditation from './routes/Meditation';
 import Home from './routes/home';
+import { RecordHistory } from './routes/History';
 
 import './index.css';
+import { AccountInfo } from './routes/Account';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: '/app',
         element: <Meditation />
+      },
+      {
+        path: '/history',
+        element: <RecordHistory />
+      },
+      {
+        path: '/account',
+        element: <AccountInfo />
       }
     ]
   }
