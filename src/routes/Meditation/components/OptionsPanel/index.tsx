@@ -1,12 +1,4 @@
-interface BreathingCircleProps {
-  inhaleSeconds?: number;
-  exhaleSeconds?: number;
-}
-
-export const OptionsPanel = ({
-  inhaleSeconds,
-  exhaleSeconds
-}: BreathingCircleProps) => {
+export const OptionsPanel = () => {
   return (
     <>
       <h2 className="mt-6 text-2xl font-semibold">Customization Options</h2>
