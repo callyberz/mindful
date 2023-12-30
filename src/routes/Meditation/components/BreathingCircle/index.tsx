@@ -1,4 +1,3 @@
-import { inahleExhaleIntervalInSecond } from '@/lib/constants';
 import styled, { keyframes } from 'styled-components';
 
 interface BreathingCircleProps {
