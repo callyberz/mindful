@@ -21,7 +21,9 @@ export default function Root() {
     <>
       <div className="bg-[#6f5de6] min-h-screen text-white">
         <div className="pt-8 px-6">
-          <h1 className="text-4xl font-bold">Welcome</h1>
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            Welcome
+          </h1>
           <p className="text-sm opacity-70">{currentDateTimeString}</p>
         </div>
 
